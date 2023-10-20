@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand logo" href="#"
+          ><img src="../img/Icon 1.png" alt="Logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-between"
+          >
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/halaman-berita/halaman-berita.html"
+                >Berita</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/halaman-artikel/halaman-artikel.html"
+                >Artikel</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/petisi.html">Petisi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/halaman-donasi/halaman-donasi.html"
+                >Donasi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/data-diri.html">Profile</a>
+            </li>
+          </ul>
+          <div
+            class="d-flex justify-content-center justify-content-md-end align-items-center pt-2"
+          >
+            <a href="/auth/login.html" class="nav-link btn login-button"
+              >Login</a
+            >
+
+            <a href="/auth/register.html" class="nav-link register-button"
+              >Daftar</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mb-5">
+      <div class="row d-flex justify-content-center login-container">
+        <div class="col-md-6 d-flex justify-content-center">
+          <div class="card w-100 h-100">
+            <div class="mt-2">
+              <h3 class="text-center">Masuk ke Akun</h3>
+            </div>
+            <div class="card-body">
+              <form onsubmit="handleLogin(event)">
+                <div class="form-group mb-4">
+                  <label for="username">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Masukkan Email"
+                  />
+                </div>
+                <div class="form-group mb-4">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Masukkan password"
+                  />
+                </div>
+                <a href="/auth/lupa-password.html" class="bg-white text-black"
+                  >Lupa Password</a
+                >
+                <button type="submit" class="btn btn-success btn-block w-100">
+                  Login
+                </button>
+                <div>
+                  Belum Punya akun?
+                  <a href="/auth/register.html" class="bg-white text-black"
+                    >Daftar</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer d-flex flex-column justify-content-center w-100">
+      <div
+        class="footer-content d-flex flex-column justify-content-center flex-sm-row justify-content-sm-between w-100"
+      >
+        <div
+          class="footer-left d-flex justify-content-center justify-content-sm-start mb-3"
+        >
+          <div>
+            <div class="footer-logo">
+              <img src="../img/Icon 1.png" alt="Footer Logo" />
+            </div>
+            <div>
+              <p>
+                Belajar menjadi peduli dengan lingkungan merupakan langkah awal
+                untuk menyelamatkan dunia
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links d-flex justify-content-between">
+          <ul class="me-5">
+            <li>
+              <a href="#" class="head-links"><b>Home</b></a>
+            </li>
+            <li><a href="#">Edukasi</a></li>
+            <li><a href="#">Dukungan</a></li>
+          </ul>
+          <ul class="me-5">
+            <li>
+              <a href="#" class="head-links"><b>Edukasi</b></a>
+            </li>
+            <li><a href="#">Berita</a></li>
+            <li><a href="#">Artikel</a></li>
+          </ul>
+          <ul class="me-5">
+            <li>
+              <a href="#" class="head-links"><b>Campaign</b></a>
+            </li>
+            <li><a href="#">Petisi</a></li>
+            <li><a href="#">Pengaduan</a></li>
+          </ul>
+          <ul class="me-3">
+            <li>
+              <a href="#" class="head-links"><b>Volunteer</b></a>
+            </li>
+            <li><a href="#">Informasi</a></li>
+            <li><a href="#">Pendaftaran</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p><b>Copyright &copy; 2023 Zero Trash.</b></p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
